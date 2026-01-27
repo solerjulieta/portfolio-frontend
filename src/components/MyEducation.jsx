@@ -85,6 +85,8 @@ export default function MyEducation() {
         console.warn("API failed, keeping snapshot", err)
       }
 
+      loadData()
+
       return () => {
         isMounted = false
       }
