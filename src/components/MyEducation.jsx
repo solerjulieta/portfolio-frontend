@@ -85,12 +85,13 @@ export default function MyEducation() {
         console.warn("API failed, keeping snapshot", err)
       }
 
-      loadData()
+
+    }
+          loadData()
 
       return () => {
         isMounted = false
       }
-    }
   }, [])
 
   /*
