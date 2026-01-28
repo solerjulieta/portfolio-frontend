@@ -182,6 +182,7 @@
         },
         {
             "id": "edu-3",
+            "uid": "graphic-express",
             "title": {
                 "es": "Adobe Gráfica Express CS6",
                 "en": "Adobe Graphic Express CS6"
@@ -225,6 +226,7 @@
         },
         {
             "id": "edu-4",
+            "uid": "adobe-photoshop",
             "title": {
                 "es": "Adobe Photoshop CS6",
                 "en": "Adobe Photoshop CS6"
@@ -258,6 +260,7 @@
         },
         {
             "id": "edu-5",
+            "uid": "adobe-illustrator",
             "title": {
                 "es": "Adobe Illustrator CS6",
                 "en": "Adobe Illustrator CS6"
@@ -291,6 +294,7 @@
         },
         {
             "id": "edu-6",
+            "uid": "english-language",
             "title": {
                 "es": "Inglés",
                 "en": "English"
@@ -324,6 +328,7 @@
         },
         {
             "id": "edu-7",
+            "uid": "cibersecurity",
             "title": {
                 "es": "Seguridad Informática - nivel intermedio",
                 "en": "Cybersecurity – Intermediate level"
@@ -409,6 +414,7 @@
         },
         {
             "id": "edu-8",
+            "uid": "programming-with-python",
             "title": {
                 "es": "Introducción a la programación con Python",
                 "en": "Introduction to Programming with Python"
@@ -438,6 +444,7 @@
         },
         {
             "id": "edu-10",
+            "uid": "data-analystic",
             "title": {
                 "es": "Analisis de Datos",
                 "en": "Data Analystic"
@@ -466,7 +473,8 @@
             }
         },
         {
-            "id": "edu-9",
+            "id": "edu-11",
+            "uid": "microsoft-excel",
             "title": {
                 "es": "Microsoft Excel 2021",
                 "en": "Microsoft Excel 2021"
