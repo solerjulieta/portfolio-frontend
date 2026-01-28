@@ -6,6 +6,7 @@
     "education": [
         {
             "id": "edu-1",
+            "uid": "design-and-programming",
             "title": {
                 "es": "Técnico Superior en Diseño y Programación Web",
                 "en": "Technical Degree in Web Design and Programming"
@@ -99,6 +100,7 @@
         },
         {
             "id": "edu-2",
+            "uid": "graphic-design",
             "title": {
                 "es": "Técnico Superior en Diseño Gráfico y Publicitario",
                 "en": "Technical Degree in Graphic and Advertising Design"

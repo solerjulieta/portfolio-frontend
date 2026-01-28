@@ -300,7 +300,8 @@ export default function MyEducation() {
 
                     return (
                       <motion.div
-                        key={study._id || index}
+                        //key={study._id || index}
+                        key={study.uid}
                         layout
                         initial={hydrated && isBackendRefresh.current ? false : { opacity: 0, x: isLeft ? -30 : 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
