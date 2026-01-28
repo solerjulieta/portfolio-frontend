@@ -18,6 +18,7 @@ export default function MyEducation() {
   const [selectedCategory, setSelectedCategory] = useState("Degree")
   const [courseSubcategories, setCourseSubcategories] = useState([])
   const [selectedSubcategory, setSelectedSubcategory] = useState(null)
+  const [hydrated, setHydrated] = useState(false)
 
   const breakpoint = useBreakpoint()
   const initialLimit = ITEMS_PER_SCREEN[breakpoint]
@@ -68,6 +69,7 @@ export default function MyEducation() {
         const published = publishOnly(snapshot)
         setStudies(published)
         buildSubcategories(published)
+        setHydrated(true)
       } catch(err){
         console.warn("No snapshot available", err)
       }
@@ -187,7 +189,7 @@ export default function MyEducation() {
     >
       <motion.div
         variants={sectionVariants}
-        initial="hidden"
+        initial={hydrated ? false : "hidden"}
         whileInView="visible"
         viewport={{ once: true, margin: "-120px" }}
       >
