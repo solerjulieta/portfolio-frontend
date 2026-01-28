@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import CompSection from './CompSection'
 import Subtitle from './Subtitle'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import educationService from '../services/education.service'
 import { motion, AnimatePresence } from "framer-motion"
 import AnimateH2 from './AnimateH2'
@@ -19,6 +19,7 @@ export default function MyEducation() {
   const [courseSubcategories, setCourseSubcategories] = useState([])
   const [selectedSubcategory, setSelectedSubcategory] = useState(null)
   const [hydrated, setHydrated] = useState(false)
+  const isBackendRefresh = useRef(false)
 
   const breakpoint = useBreakpoint()
   const initialLimit = ITEMS_PER_SCREEN[breakpoint]
@@ -80,6 +81,7 @@ export default function MyEducation() {
         if(!isMounted) return
 
         const published = publishOnly(apiData)
+        isBackendRefresh.current = true
         setStudies(published)
         buildSubcategories(published)
         console.log("Education updated from API")
@@ -300,7 +302,7 @@ export default function MyEducation() {
                       <motion.div
                         key={study._id || index}
                         layout
-                        initial={hydrated ? false : { opacity: 0, x: isLeft ? -30 : 30 }}
+                        initial={hydrated && isBackendRefresh.current ? false : { opacity: 0, x: isLeft ? -30 : 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{
