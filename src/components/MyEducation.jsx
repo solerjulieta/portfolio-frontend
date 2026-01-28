@@ -300,7 +300,7 @@ export default function MyEducation() {
                       <motion.div
                         key={study._id || index}
                         layout
-                        initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
+                        initial={hydrated ? false : { opacity: 0, x: isLeft ? -30 : 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{
