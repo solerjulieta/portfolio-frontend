@@ -505,6 +505,7 @@
     ],
     "projects": [
         {
+            "uid": "te-busco",
             "title": "Te busco",
             "description": {
                 "es": "Aplicación web que conecta conductores habilitados con personas con discapacidad que necesitan traslados a Centros de salud y/o rehabilitación.",
@@ -536,39 +537,8 @@
             }
         },
         {
-            "id": "project-1",
-            "title": "Te busco",
-            "description": {
-                "es": "Aplicación web que conecta conductores habilitados con personas con discapacidad que necesitan traslados a Centros de salud y/o rehabilitación.",
-                "en": "Web application that connects licensed drivers with people with disabilities who need transportation to health and/or rehabilitation centers."
-            },
-            "tech": [
-                {
-                    "es": "MongoDB",
-                    "en": "MongoDB"
-                },
-                {
-                    "es": "Node JS",
-                    "en": "Node JS"
-                },
-                {
-                    "es": "React",
-                    "en": "React"
-                }
-            ],
-            "demo_link": "https://tebuscoar.vercel.app",
-            "category": {
-                "key": "Web",
-                "es": "Diseño Web",
-                "en": "Web Design"
-            },
-            "img": "tebusco.jpg",
-            "status": {
-                "key": "PUBLISHED"
-            }
-        },
-        {
             "id": "project-2",
+            "uid": "tu-mate",
             "title": "Tu mate",
             "description": {
                 "es": "E-commerce Full Stack responsive. Incluye experiencia de compra (navegación y carrito) y gestión administrativa completa (CRUD).",
@@ -605,6 +575,7 @@
         },
         {
             "id": "project-3",
+            "uid": "creSer",
             "title": "CreSer",
             "description": {
                 "es": "Isologotipo diseñado para equipo interdisciplinario y de apoyo a la integración escolar.",
@@ -622,6 +593,7 @@
         },
         {
             "id": "project-4",
+            "uid": "1.4f-fotografia",
             "title": "1.4f Fotografía",
             "description": {
                 "es": "Logotipo para fotógrafo profesional.",
@@ -639,6 +611,7 @@
         },
         {
             "id": "project-5",
+            "uid": "viro",
             "title": "Viró",
             "description": {
                 "es": "Creación de marca y logotipo para venta de productos comestibles y snacks.",
