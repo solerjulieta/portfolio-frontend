@@ -26,7 +26,7 @@ import AdminDashboard from './pages/admin/AdminDashboard.jsx'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <RoatLayout toasterPosition="mt-[65px] md:mt-[85px]"><App /></RoatLayout>
+    element: <RoatLayout toasterPosition="mt-[60px] md:mt-[85px]"><App /></RoatLayout>
   },
   {
     path: '/admin/login',
