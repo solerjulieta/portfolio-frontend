@@ -17,10 +17,10 @@ function App()
   return (
     <>
       <CompHeader>
-        <CompNavbar onDownoaldCV={() => setIsCVOpen(true)}/>
+        <CompNavbar onDownloadCV={() => setIsCVOpen(true)}/>
       </CompHeader>
       {/*<Presentation />*/}
-      <AboutMe onDownoaldCV={() => setIsCVOpen(true)} />
+      <AboutMe onDownloadCV={() => setIsCVOpen(true)} />
       <MyEducation />
       <MyProjects />
       <ContactMe />

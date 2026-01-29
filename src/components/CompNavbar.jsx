@@ -120,7 +120,7 @@ function CompNavbar({ onDownloadCV })
                         {liOptions.map((liOption, i) => (
                             liOption.txt === 'menu.cv' ? (
                                 <CVButton
-                                    txtButton={t("liOption.txt")}
+                                    txtButton={t(liOption.txt)}
                                     onClick={() => {
                                         onDownloadCV()
                                         setIsOpen(false)
