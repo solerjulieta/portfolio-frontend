@@ -1,4 +1,3 @@
-import { Toaster } from 'react-hot-toast'
 import AboutMe from './components/AboutMe'
 import CompHeader from './components/CompHeader'
 import CompNavbar from './components/CompNavbar'
