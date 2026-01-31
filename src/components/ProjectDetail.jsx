@@ -65,7 +65,7 @@ export default function ProjectDetail()
                                         {section.body?.[lang]}
                                     </ReactMarkDown>
                                     <p>{section.content}</p>
-                                    {Array.isArray(section.media && section.media.length > 0 && (
+                                    {Array.isArray(section.media) && section.media.length > 0 && (
                                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                                             {section.media.map((item, i) => {
                                                 if(item.type === "image"){
@@ -86,7 +86,7 @@ export default function ProjectDetail()
                                                 return null
                                             })}
                                         </div>
-                                    ))}
+                                    )}
                                 </div>
                             </motion.div>
                         ))}
