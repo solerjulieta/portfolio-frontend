@@ -47,7 +47,7 @@ export default function ProjectDetail()
                                     <Subtitle subtitle={section.subtitle?.[lang]} />
                                 </div>
                                 <div>
-                                    <h2 className="text-2xl lg:text-4xl mb-5">{section.title?.[lang]}</h2>
+                                    <h2 className="text-2xl lg:text-4xl mb-4">{section.title?.[lang]}</h2>
                                     <ReactMarkDown 
                                     components={{
                                         p: ({ children }) => (
