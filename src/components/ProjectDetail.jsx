@@ -29,30 +29,32 @@ export default function ProjectDetail()
             >
                 {project?.title}
             </motion.h1>
-            {Array.isArray(project?.caseStudy?.sections) && (
-                <div className="space-y-16">
-                    {project?.caseStudy
-                        .filter(section => section.enabled)
+            {project?.caseStudy?.enabled && 
+                Array.isArray(project.caseStudy.section) && (
+                    <div className="space-y-16">
+                        {project.caseStudy.sections
+                        .sort((a, b) => a.order - b.order)
                         .map((section, index) => (
                             <motion.div
-                                className="xl:flex xl:items-start"
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.1 }}
-                            >
-                                <div className="xl:mr-4">
-                                    <Subtitle subtitle={section.label?.[lang]} />
-                                </div>
-                                <div>
-                                    <h2 className="text-2xl lg:text-4xl mb-5">{section.title?.[lang]}</h2>
-                                    <p>{section.content}</p>
-                                </div>
-                            </motion.div>
-                        ))
-                    }
-                </div>
-            )}
+                                    className="xl:flex xl:items-start"
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: index * 0.1 }}
+                                >
+                                    <div className="xl:mr-4">
+                                        <Subtitle subtitle={section.label?.[lang]} />
+                                    </div>
+                                    <div>
+                                        <h2 className="text-2xl lg:text-4xl mb-5">{section.title?.[lang]}</h2>
+                                        <p>{section.content}</p>
+                                    </div>
+                                </motion.div>
+                        ))}
+                    </div>
+                )
+            }
+
             <div className="xl:flex xl:items-start">
                 <div className="xl:mr-4">
                     <Subtitle subtitle="Marca" />
