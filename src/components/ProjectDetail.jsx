@@ -1,11 +1,55 @@
 import CompSection from './CompSection'
 import { motion } from 'framer-motion'
 import Subtitle from './Subtitle'
+import { useEffect, useState } from 'react'
+import projectsService from '../services/projects.service'
+import { useParams } from 'react-router-dom'
 
 export default function ProjectDetail()
 {
+    const { id } = useParams()
+    const [project, setProject] = useState()
+
+    useEffect(() => {
+        projectsService.getById(id)
+        .then(data => {
+            setProject(data)
+        })
+    }, [id])
+
     return(
         <CompSection className="mt-20">
+            <motion.h1
+                className="text-2xl lg:text-4xl mb-5"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+            >
+                {project.title}
+            </motion.h1>
+            {Array.isArray(project.caseStudy) && project.caseStudy.length > 0 && (
+                <div className="space-y-16">
+                    {project.caseStudy
+                        .filter(section => section.enabled)
+                        .map((section, index) => (
+                            <motion.div
+                                className="xl:flex xl:items-start"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                            >
+                                <div className="xl:mr-4">
+                                    <Subtitle subtitle={section.label} />
+                                </div>
+                                <div>
+                                    <h2 className="text-2xl lg:text-4xl mb-5">{section.title}</h2>
+                                    <p>{section.content}</p>
+                                </div>
+                            </motion.div>
+                        ))
+                    }
+                </div>
+            )}
             <div className="xl:flex xl:items-start">
                 <div className="xl:mr-4">
                     <Subtitle subtitle="Marca" />
