@@ -68,22 +68,29 @@ export default function ProjectDetail()
                                     {Array.isArray(section.media) && section.media.length > 0 && (
                                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                                             {section.media.map((item, i) => {
-                                                if(item.type === "image"){
-                                                    return(
-                                                        <motion.img 
-                                                            key={i}
-                                                            src={`/img/projects/${item.src}`}
-                                                            alt={item.alt}
-                                                            loading="lazy"
-                                                            className="w-full rounded-2xl shadow-lg object-cover"
-                                                            initial={{ opacity: 0, scale: 0.95 }}
-                                                            whileInView={{ opacity: 1, scale: 1 }}
-                                                            viewport={{ once: true }}
-                                                            transition={{ duration: 0.4 }}
-                                                        />
-                                                    )
-                                                }
-                                                return null
+                                                if(item.type !== "image") return null
+                                                
+                                                const isHero = i === 0
+
+                                                return(
+                                                    <motion.img 
+                                                        key={i}
+                                                        src={`/img/projects/${item.src}`}
+                                                        alt={item.alt}
+                                                        loading="lazy"
+                                                        className={`
+                                                            w-full 
+                                                            rounded-2xl 
+                                                            shadow-lg 
+                                                            object-cover
+                                                            ${isHero ? "xl:col-span-2 xl:h-[420px]" : "xl:h-[240px]"}
+                                                        `}
+                                                        initial={{ opacity: 0, scale: 0.95 }}
+                                                        whileInView={{ opacity: 1, scale: 1 }}
+                                                        viewport={{ once: true }}
+                                                        transition={{ duration: 0.4 }}
+                                                    />
+                                                )
                                             })}
                                         </div>
                                     )}
