@@ -51,7 +51,7 @@ export default function ProjectDetail()
                                     <ReactMarkDown 
                                     components={{
                                         strong: ({ children }) => (
-                                            <span>
+                                            <span className="text-bold text-mainViolet">
                                                 {children}
                                             </span>
                                         )
