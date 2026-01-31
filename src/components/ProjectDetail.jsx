@@ -14,6 +14,7 @@ export default function ProjectDetail()
         projectsService.getById(id)
         .then(data => {
             setProject(data)
+            console.log("La data que viene es", data)
         })
     }, [id])
 
