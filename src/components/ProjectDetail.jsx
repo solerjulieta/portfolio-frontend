@@ -24,9 +24,9 @@ export default function ProjectDetail()
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
             >
-                {project.title}
+                {project?.title}
             </motion.h1>
-            {Array.isArray(project.caseStudy) && project.caseStudy.length > 0 && (
+            {Array.isArray(project?.caseStudy) && project?.caseStudy.length > 0 && (
                 <div className="space-y-16">
                     {project.caseStudy
                         .filter(section => section.enabled)
