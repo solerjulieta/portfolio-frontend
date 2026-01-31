@@ -30,7 +30,7 @@ export default function ProjectDetail()
                 {project?.title}
             </motion.h1>
             {project?.caseStudy?.enabled && 
-                Array.isArray(project.caseStudy.section) && (
+                Array.isArray(project.caseStudy.sections) && (
                     <div className="space-y-16">
                         {project.caseStudy.sections
                         .sort((a, b) => a.order - b.order)
