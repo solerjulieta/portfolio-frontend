@@ -29,6 +29,10 @@ const router = createBrowserRouter([
     element: <RoatLayout toasterPosition="mt-[50px] md:mt-[85px]"><App /></RoatLayout>
   },
   {
+    path: '/project/:id',
+    element: <></>
+  },
+  {
     path: '/admin/login',
     element: <RoatLayout toasterPosition="mt-[20px]"><LoginPage /></RoatLayout>
   },
