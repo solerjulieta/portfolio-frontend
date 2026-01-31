@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react'
 import projectsService from '../services/projects.service'
 import { useParams } from 'react-router-dom'
 import i18n from '../js/i18n'
+import ReactMarkDown from 'react-markdown'
 
 export default function ProjectDetail()
 {
@@ -47,6 +48,17 @@ export default function ProjectDetail()
                                 </div>
                                 <div>
                                     <h2 className="text-2xl lg:text-4xl mb-5">{section.title?.[lang]}</h2>
+                                    <ReactMarkDown 
+                                    components={{
+                                        strong: ({ children }) => (
+                                            <span>
+                                                {children}
+                                            </span>
+                                        )
+                                    }}
+                                    >
+                                        {section.body?.[lang]}
+                                    </ReactMarkDown>
                                     <p>{section.content}</p>
                                 </div>
                             </motion.div>
