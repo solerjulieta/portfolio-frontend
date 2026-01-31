@@ -50,8 +50,13 @@ export default function ProjectDetail()
                                     <h2 className="text-2xl lg:text-4xl mb-5">{section.title?.[lang]}</h2>
                                     <ReactMarkDown 
                                     components={{
+                                        p: ({ children }) => (
+                                            <p className="text-txtGrey lg:text-lg mb-6 leading-relaxed">
+                                                {children}
+                                            </p>
+                                        ),
                                         strong: ({ children }) => (
-                                            <span className="text-bold text-mainViolet">
+                                            <span className="font-bold text-mainViolet">
                                                 {children}
                                             </span>
                                         )
