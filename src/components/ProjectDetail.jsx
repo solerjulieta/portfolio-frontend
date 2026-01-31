@@ -72,7 +72,7 @@ export default function ProjectDetail()
                                                     return(
                                                         <motion.img 
                                                             key={i}
-                                                            src={`/images/case-study/${item.src}`}
+                                                            src={`/img/projects/${item.src}`}
                                                             alt={item.alt}
                                                             loading="lazy"
                                                             className="w-full rounded-2xl shadow-lg object-cover"
