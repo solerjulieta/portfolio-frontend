@@ -4,11 +4,13 @@ import Subtitle from './Subtitle'
 import { useEffect, useState } from 'react'
 import projectsService from '../services/projects.service'
 import { useParams } from 'react-router-dom'
+import i18n from '../js/i18n'
 
 export default function ProjectDetail()
 {
     const { id } = useParams()
     const [project, setProject] = useState()
+    const lang = i18n.language || 'es'
 
     useEffect(() => {
         projectsService.getById(id)
@@ -27,7 +29,7 @@ export default function ProjectDetail()
             >
                 {project?.title}
             </motion.h1>
-            {Array.isArray(project?.caseStudy) && project?.caseStudy.length > 0 && (
+            {Array.isArray(project.caseStudy?.sections) && (
                 <div className="space-y-16">
                     {project.caseStudy
                         .filter(section => section.enabled)
