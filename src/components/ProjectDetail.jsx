@@ -109,11 +109,11 @@ export default function ProjectDetail()
                                                 {section.palette.secondaryLabel?.[lang]}
                                             </h3>
 
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 w-fit">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
                                                 {section.palette.secondary.map((color, i) => (
                                                 <div
                                                     key={i}
-                                                    className="flex items-center gap-4 p-4 rounded-xl border border-cardBorder"
+                                                    className="flex items-center gap-4 p-4 rounded-xl border border-cardBorder w-fit"
                                                 >
                                                     <div
                                                     className="w-14 h-14 rounded-lg shadow-inner"
