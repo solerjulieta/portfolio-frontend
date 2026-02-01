@@ -86,19 +86,19 @@ export default function ProjectDetail()
                                                 {section.palette.primary.label?.[lang]}
                                             </h3>
 
-                                            <div className="flex items-center gap-6 p-4 rounded-xl border border-cardBorder">
+                                            <div className="flex items-center gap-6 p-4 rounded-xl border border-cardBorder w-fit">
                                                 <div
-                                                className="w-20 h-20 rounded-xl shadow-inner"
-                                                style={{ backgroundColor: section.palette.primary.hex }}
+                                                    className="w-25 h-25 rounded-xl shadow-inner"
+                                                    style={{ backgroundColor: section.palette.primary.hex }}
                                                 />
 
                                                 <div className="space-y-1 text-sm">
-                                                <p className="font-semibold">
-                                                    {section.palette.primary.name?.[lang]}
-                                                </p>
-                                                <p>HEX: {section.palette.primary.hex}</p>
-                                                <p>RGB: {section.palette.primary.rgb}</p>
-                                                <p>HSL: {section.palette.primary.hsl}</p>
+                                                    <p className="font-semibold">
+                                                        {section.palette.primary.name?.[lang]}
+                                                    </p>
+                                                    <p>HEX: {section.palette.primary.hex}</p>
+                                                    <p>RGB: {section.palette.primary.rgb}</p>
+                                                    <p>HSL: {section.palette.primary.hsl}</p>
                                                 </div>
                                             </div>
                                             </div>
@@ -109,7 +109,7 @@ export default function ProjectDetail()
                                                 {section.palette.secondaryLabel?.[lang]}
                                             </h3>
 
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 w-fit">
                                                 {section.palette.secondary.map((color, i) => (
                                                 <div
                                                     key={i}
