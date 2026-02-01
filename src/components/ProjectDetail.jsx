@@ -65,6 +65,100 @@ export default function ProjectDetail()
                                         {section.body?.[lang]}
                                     </ReactMarkDown>
                                     <p>{section.content}</p>
+                                    {/* PALETA Y PRINCIPIOS DE COLOR */}
+                                    {section.key === "color" && (
+                                    <>
+                                        {/* PALETA */}
+                                        {section.palette && (
+                                        <div className="mt-10 space-y-8">
+
+                                            {/* Color principal */}
+                                            <div>
+                                            <h3 className="text-lg font-semibold mb-4">
+                                                {section.palette.primary.label?.[lang]}
+                                            </h3>
+
+                                            <div className="flex items-center gap-6 p-4 rounded-xl border border-cardBorder">
+                                                <div
+                                                className="w-20 h-20 rounded-xl shadow-inner"
+                                                style={{ backgroundColor: section.palette.primary.hex }}
+                                                />
+
+                                                <div className="space-y-1 text-sm">
+                                                <p className="font-semibold">
+                                                    {section.palette.primary.name?.[lang]}
+                                                </p>
+                                                <p>HEX: {section.palette.primary.hex}</p>
+                                                <p>RGB: {section.palette.primary.rgb}</p>
+                                                <p>HSL: {section.palette.primary.hsl}</p>
+                                                </div>
+                                            </div>
+                                            </div>
+
+                                            {/* Colores secundarios */}
+                                            <div>
+                                            <h3 className="text-lg font-semibold mb-4">
+                                                {section.palette.secondaryLabel?.[lang]}
+                                            </h3>
+
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
+                                                {section.palette.secondary.map((color, i) => (
+                                                <div
+                                                    key={i}
+                                                    className="flex items-center gap-4 p-4 rounded-xl border border-cardBorder"
+                                                >
+                                                    <div
+                                                    className="w-14 h-14 rounded-lg shadow-inner"
+                                                    style={{ backgroundColor: color.hex }}
+                                                    />
+
+                                                    <div className="text-sm space-y-1">
+                                                    <p className="font-semibold">{color.name?.[lang]}</p>
+                                                    <p>HEX: {color.hex}</p>
+                                                    <p>RGB: {color.rgb}</p>
+                                                    <p>HSL: {color.hsl}</p>
+                                                    </div>
+                                                </div>
+                                                ))}
+                                            </div>
+                                            </div>
+                                        </div>
+                                        )}
+
+                                        {/* PRINCIPIOS */}
+                                        {section.principles && (
+                                        <div className="mt-12">
+                                            <h3 className="text-lg font-semibold mb-6">
+                                            {section.principles.label?.[lang]}
+                                            </h3>
+
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
+                                            {section.principles.items.map((item, i) => (
+                                                <motion.div
+                                                key={i}
+                                                className="p-6 rounded-2xl border border-cardBorder shadow-sm text-center"
+                                                initial={{ opacity: 0, y: 20 }}
+                                                whileInView={{ opacity: 1, y: 0 }}
+                                                viewport={{ once: true }}
+                                                >
+                                                <div className="text-mainViolet mb-3 text-2xl">
+                                                    <i className={`lucide lucide-${item.icon}`} />
+                                                </div>
+
+                                                <h4 className="font-semibold mb-2">
+                                                    {item.title?.[lang]}
+                                                </h4>
+
+                                                <p className="text-sm text-txtGrey">
+                                                    {item.description?.[lang]}
+                                                </p>
+                                                </motion.div>
+                                            ))}
+                                            </div>
+                                        </div>
+                                        )}
+                                    </>
+                                    )}
                                     {Array.isArray(section.media) && section.media.length > 0 && (
                                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                                             {section.media.map((item, i) => {
