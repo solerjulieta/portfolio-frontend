@@ -88,7 +88,7 @@ export default function ProjectDetail()
 
                                             <div className="flex items-center gap-6 p-4 rounded-xl border border-cardBorder w-fit">
                                                 <div
-                                                    className="w-25 h-25 rounded-xl shadow-inner"
+                                                    className="w-24 h-24 rounded-xl shadow-inner"
                                                     style={{ backgroundColor: section.palette.primary.hex }}
                                                 />
 
@@ -109,7 +109,7 @@ export default function ProjectDetail()
                                                 {section.palette.secondaryLabel?.[lang]}
                                             </h3>
 
-                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 w-fit">
+                                            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 w-fit">
                                                 {section.palette.secondary.map((color, i) => (
                                                 <div
                                                     key={i}
