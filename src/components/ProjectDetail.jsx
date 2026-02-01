@@ -6,12 +6,20 @@ import projectsService from '../services/projects.service'
 import { useParams } from 'react-router-dom'
 import i18n from '../js/i18n'
 import ReactMarkDown from 'react-markdown'
+import { Heart, ShieldCheck, Eye, Users } from 'lucide-react'
 
 export default function ProjectDetail()
 {
     const { id } = useParams()
     const [project, setProject] = useState()
     const lang = i18n.language || 'es'
+
+    const ICONS = {
+        heart: Heart,
+        "shield-check": ShieldCheck,
+        eye: Eye,
+        users: Users
+    }
 
     useEffect(() => {
         projectsService.getById(id)
@@ -133,27 +141,31 @@ export default function ProjectDetail()
                                             </h3>
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
-                                            {section.principles.items.map((item, i) => (
-                                                <motion.div
-                                                key={i}
-                                                className="p-6 rounded-2xl border border-cardBorder shadow-sm text-center"
-                                                initial={{ opacity: 0, y: 20 }}
-                                                whileInView={{ opacity: 1, y: 0 }}
-                                                viewport={{ once: true }}
-                                                >
-                                                <div className="text-mainViolet mb-3 text-2xl">
-                                                    <i className={`lucide lucide-${item.icon}`} />
-                                                </div>
+                                            {section.principles.items.map((item, i) => {
+                                                const Icon = ICONS[item.icon]
 
-                                                <h4 className="font-semibold mb-2">
-                                                    {item.title?.[lang]}
-                                                </h4>
+                                                return(
+                                                    <motion.div
+                                                        key={i}
+                                                        className="p-6 rounded-2xl border border-cardBorder shadow-sm text-center"
+                                                        initial={{ opacity: 0, y: 20 }}
+                                                        whileInView={{ opacity: 1, y: 0 }}
+                                                        viewport={{ once: true }}
+                                                    >
+                                                        {Icon && (
+                                                            <Icon className="w-8 h-8 text-mainViolet mx-auto mb-3" />
+                                                        )}
 
-                                                <p className="text-sm text-txtGrey">
-                                                    {item.description?.[lang]}
-                                                </p>
-                                                </motion.div>
-                                            ))}
+                                                        <h4 className="font-semibold mb-2">
+                                                            {item.title?.[lang]}
+                                                        </h4>
+
+                                                        <p className="text-sm text-txtGrey">
+                                                            {item.description?.[lang]}
+                                                        </p>
+                                                    </motion.div>
+                                                )
+                                            })}
                                             </div>
                                         </div>
                                         )}
