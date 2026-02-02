@@ -192,7 +192,7 @@ export default function ProjectDetail()
                                             </h4>
 
                                             <p
-                                                className="text-xl mb-4 break-words whitespace-pre-wrap max-w-full"
+                                                className="text-lg mb-4 break-words whitespace-pre-wrap max-w-full"
                                                 style={{
                                                 fontFamily: section.typography.fontName,
                                                 fontWeight:
