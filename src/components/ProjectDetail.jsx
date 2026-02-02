@@ -171,6 +171,49 @@ export default function ProjectDetail()
                                         )}
                                     </>
                                     )}
+                                    {/* TIPOGRAFÍA */}
+                                    {section.typography && (
+                                    <div className="mt-12">
+                                        <h3 className="text-lg font-semibold mb-6">
+                                        {lang === "es" ? "Tipografía" : "Typography"} — {section.typography.fontName}
+                                        </h3>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+                                        {section.typography.samples.map((sample, i) => (
+                                            <motion.div
+                                            key={i}
+                                            className="p-6 rounded-2xl border border-cardBorder shadow-sm"
+                                            initial={{ opacity: 0, y: 20 }}
+                                            whileInView={{ opacity: 1, y: 0 }}
+                                            viewport={{ once: true }}
+                                            >
+                                            <h4 className="font-semibold mb-2">
+                                                {sample.label?.[lang]}
+                                            </h4>
+
+                                            <p
+                                                className="text-xl mb-4"
+                                                style={{
+                                                fontFamily: section.typography.fontName,
+                                                fontWeight:
+                                                    sample.weight === "regular" ? 400 :
+                                                    sample.weight === "medium" ? 500 :
+                                                    sample.weight === "semibold" ? 600 :
+                                                    sample.weight === "bold" ? 700 : 400
+                                                }}
+                                            >
+                                                {sample.characters}
+                                            </p>
+
+                                            <p className="text-sm text-txtGrey">
+                                                {sample.usage?.[lang]}
+                                            </p>
+                                            </motion.div>
+                                        ))}
+                                        </div>
+                                    </div>
+                                    )}
+
                                     {Array.isArray(section.media) && section.media.length > 0 && (
                                         <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
                                             {section.media.map((item, i) => {
