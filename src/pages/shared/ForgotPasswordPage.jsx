@@ -66,6 +66,8 @@ export default function ForgotPasswordPage()
                     fields={fields}
                     onSubmit={handleResetPassword}
                     schema={forgotPasswordSchema}
+                    register={register}
+                    errors={errors}
                     txtButton="Recuperar mi contraseña"
                     isLoading={isLoading}
                 />
