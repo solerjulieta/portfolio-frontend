@@ -58,7 +58,7 @@ export default function AdminCard({ panelInfo, classWidth })
                             className="text-right text-sm font-medium text-txtGrey/70 flex items-center mb-1 justify-center"
                         >
                             <TrendIcon className={`w-4 h-4 mr-1 ${colorTrend}`} />
-                                <span className={`text-bold ${colorTrend}`}>
+                                <span className={`text-bold ${colorTrend} ml-.5`}>
                                 {Math.abs(trend.percent)}% {trendText} </span> que {trend.previousLabel.toLowerCase()}
                         </p>
                     )}
