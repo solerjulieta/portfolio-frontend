@@ -4,14 +4,22 @@ export default function AdminCard({ panelInfo, classWidth })
 {
     const Icon = panelInfo.icon
     const trend = panelInfo.trend
-    const colorTrend =  trend?.percent >= 0
-        ? "text-green-600"
-        : "text-red-600"
+
+    //Determino si la tendencia es positiva o negativa
+    const isPositive = trend?.percent > 0
+    const isNegative = trend?.percent < 0
+
+    const colorTrend =  isPositive ?
+        "text-green-600"
+        : isNegative ? "text-red-600"
+        : "text-orange-600"
 
     const TrendIcon = 
-        trend?.percent > 0
+        isPositive
             ? ArrowTrendingUpIcon
             : ArrowTrendingDownIcon
+
+    const trendText = isPositive ? "más" : isNegative ? "menos" : "igual"
 
     return(
         <li className={`bg-white rounded-lg shadow-md p-4 mt-14 flex flex-col justify-between ${classWidth}`}>
@@ -51,7 +59,7 @@ export default function AdminCard({ panelInfo, classWidth })
                         >
                             <TrendIcon className={`w-4 h-4 mr-1 ${colorTrend}`} />
                                 <span className={`text-bold ${colorTrend}`}>
-                                {Math.abs(trend.percent)}%</span> que {trend.previousLabel.toLowerCase()}
+                                {Math.abs(trend.percent)}% {trendText}</span> que {trend.previousLabel.toLowerCase()}
                         </p>
                     )}
                     <div className="flex justify-between text-sm text-txtGrey/60">
