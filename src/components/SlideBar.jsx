@@ -18,7 +18,7 @@ export default function SliderBar({ isOpen, onClose }) {
     { name: "Dashboard", path: "/admin", icon: Squares2X2Icon },
     { name: "Educación", path: "education", icon: AcademicCapIcon },
     { name: "Proyectos", path: "projects", icon: FolderIcon },
-    { name: "Logout", path: null, icon: ArrowRightEndOnRectangleIcon, type: "action" },
+    { name: "Cerrar Sesión", path: null, icon: ArrowRightEndOnRectangleIcon, type: "action" },
   ]
 
   const handleLogout = async () => {
