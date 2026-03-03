@@ -6,7 +6,7 @@ import projectsService from '../services/projects.service'
 import { useParams } from 'react-router-dom'
 import i18n from '../js/i18n'
 import ReactMarkDown from 'react-markdown'
-import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound } from 'lucide-react'
+import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles } from 'lucide-react'
 
 export default function ProjectDetail()
 {
@@ -21,7 +21,10 @@ export default function ProjectDetail()
         users: Users,
         diversity: UsersRound,
         zap: Zap,
-        "hand-heart": HandHeart
+        "hand-heart": HandHeart,
+        aperture: Aperture,
+        camera: Camera,
+        sparkles: Sparkles
     }
 
     useEffect(() => {
