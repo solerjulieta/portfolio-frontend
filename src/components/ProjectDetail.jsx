@@ -6,7 +6,7 @@ import projectsService from '../services/projects.service'
 import { useParams } from 'react-router-dom'
 import i18n from '../js/i18n'
 import ReactMarkDown from 'react-markdown'
-import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles } from 'lucide-react'
+import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles, LayoutGrid, Shuffle, Leaf } from 'lucide-react'
 
 export default function ProjectDetail()
 {
@@ -24,7 +24,10 @@ export default function ProjectDetail()
         "hand-heart": HandHeart,
         aperture: Aperture,
         camera: Camera,
-        sparkles: Sparkles
+        sparkles: Sparkles,
+        "layout-grid": LayoutGrid,
+        shuffle: Shuffle,
+        leaf: Leaf
     }
 
     useEffect(() => {
@@ -200,7 +203,10 @@ export default function ProjectDetail()
                                             <p
                                                 className="text-lg mb-4 break-words whitespace-pre-wrap max-w-full"
                                                 style={{
-                                                fontFamily: section.typography.fontName,
+                                                fontFamily: sample.weight.includes("caption")
+                                                ? `${section.typography.fontName} Caption`
+                                                : section.typography.fontName,
+                                                //fontFamily: section.typography.fontName,
                                                 fontWeight:
                                                     sample.weight === "regular" ? 400 :
                                                     sample.weight === "medium" ? 500 :
