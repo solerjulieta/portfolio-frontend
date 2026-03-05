@@ -49,12 +49,12 @@ export default function ProjectDetail()
             <motion.span
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="block text-sm uppercase tracking-widest text-txtGrey mb-2"
+                className="block text-sm uppercase tracking-widest text-txtGrey mb-1 mt-12"
             >
                 {t("title_studycase")}
             </motion.span>
             <motion.h1
-                className="text-2xl lg:text-4xl mb-8"
+                className="text-2xl lg:text-4xl mb-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
             >
