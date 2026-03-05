@@ -9,6 +9,7 @@ import ReactMarkDown from 'react-markdown'
 import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles, LayoutGrid, Shuffle, Leaf } from 'lucide-react'
 import BackButton from './BackButton'
 import { useTranslation } from 'react-i18next'
+import ScrollToTop from './ScrollToTop'
 
 export default function ProjectDetail()
 {
@@ -265,6 +266,7 @@ export default function ProjectDetail()
                     </div>
                 )
             }
+            <ScrollToTop />
         </CompSection>
     )
 
