@@ -8,12 +8,14 @@ import i18n from '../js/i18n'
 import ReactMarkDown from 'react-markdown'
 import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles, LayoutGrid, Shuffle, Leaf } from 'lucide-react'
 import BackButton from './BackButton'
+import { useTranslation } from 'react-i18next'
 
 export default function ProjectDetail()
 {
     const { id } = useParams()
     const [project, setProject] = useState()
     const lang = i18n.language || 'es'
+    const { t } = useTranslation()
 
     const ICONS = {
         heart: Heart,
@@ -41,7 +43,7 @@ export default function ProjectDetail()
 
     return(
         <CompSection className="mt-20">
-            <BackButton />
+            <BackButton label={t("back_projects")} />
             <motion.h1
                 className="text-2xl lg:text-4xl mb-5"
                 initial={{ opacity: 0, y: 20 }}
