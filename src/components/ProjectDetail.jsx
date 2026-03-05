@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom'
 import i18n from '../js/i18n'
 import ReactMarkDown from 'react-markdown'
 import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles, LayoutGrid, Shuffle, Leaf } from 'lucide-react'
+import BackButton from './BackButton'
 
 export default function ProjectDetail()
 {
@@ -40,6 +41,7 @@ export default function ProjectDetail()
 
     return(
         <CompSection className="mt-20">
+            <BackButton />
             <motion.h1
                 className="text-2xl lg:text-4xl mb-5"
                 initial={{ opacity: 0, y: 20 }}
