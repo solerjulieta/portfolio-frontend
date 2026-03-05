@@ -92,7 +92,7 @@ export default function MyProjects()
 
                 const published = publishOnly(apiData)
                 setProjects(published)
-                console.log("Projectos actualizados desde la API")
+                console.log("Projectos actualizados desde la API", projects)
             } catch (err) {
                 console.warn("API falló, se mantiene snapshot", err)
             }
