@@ -6,7 +6,7 @@ export default function BackButton({ label })
 
     return(
         <button 
-            className="mr-2 text-txtGrey"
+            className="flex items-center gap-2 mb-8 text-txtGrey hover:text-mainViolet transition-colors group"
             onClick={() => navigate(-1)}
         >
             <svg 
