@@ -69,7 +69,7 @@ export default function ProjectCard({ project, index })
                         )}
                         {}
                     </div>
-                    {project.caseStudy && (
+                    {project.caseStudy?.enabled && (
                         <div
                             className="flex items-center text-mainViolet hover:underline"
                         >
