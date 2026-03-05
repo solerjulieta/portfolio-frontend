@@ -43,7 +43,7 @@ export default function ProjectDetail()
     }, [id])
 
     return(
-        <CompSection className="mt-14 mb-20">
+        <CompSection className="lg:mt-0 lg:mb-20">
             <BackButton label={t("back_projects")} />
 
             <motion.span
