@@ -73,7 +73,7 @@ export default function ProjectCard({ project, index })
                         <div
                             className="flex items-center text-mainViolet hover:underline"
                         >
-                            {t("show_studyCase")}
+                            {t("show_studycase")}
                             <ArrowRight 
                                 size={18}
                                 className="transform group-hover:translate-x-1 transition-transform duration-200"
