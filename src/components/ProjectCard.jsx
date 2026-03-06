@@ -49,7 +49,7 @@ export default function ProjectCard({ project, index })
                     <h3 className="mb-1.5 lg:text-lg">{project.title}</h3>
                     <p className="text-sm lg:text-base text-txtGrey mb-4">{project.description?.[lang]}</p>
                     {project.tech?.[lang] && (
-                        <TechTags tags={project.tech?.[lang]} />
+                        <TechTags tags={project.tech?.map(t => t[lang])} />
                     )}
                     <div className="mt-auto">
                         {project.demo_link && (
