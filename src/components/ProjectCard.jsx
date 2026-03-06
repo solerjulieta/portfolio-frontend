@@ -41,7 +41,7 @@ export default function ProjectCard({ project, index })
             //ref={ref}
             whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
             onClick={handleCardClick}
-            className="rounded-lg border border-cardBorder shadow h-full flex flex-col mb-4 lg:mb-0"
+            className="rounded-lg border border-cardBorder shadow h-full flex flex-col mb-4 lg:mb-0 group"
         >
             <div className="rounded-lg flex flex-col h-full">
                 <img src={`/img/projects/${project.img}`} className="rounded-t-lg" />
@@ -80,7 +80,7 @@ export default function ProjectCard({ project, index })
                     </div>
                     {project.caseStudy?.enabled && (
                         <div
-                            className="flex items-center text-mainViolet hover:darkViolet mt-4 text-sm group"
+                            className="flex items-center text-mainViolet hover:darkViolet mt-4 text-sm"
                         >
                             {t("show_studycase")}
                             <ArrowRight 
