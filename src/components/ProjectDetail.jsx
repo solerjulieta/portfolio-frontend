@@ -42,7 +42,7 @@ export default function ProjectDetail()
         })
     }, [id])
 
-    console.log("La data del proyecto es", data)
+    console.log("La data del proyecto es", project)
 
     return(
         <CompSection className="lg:!my-20">
