@@ -71,11 +71,11 @@ export default function ProjectCard({ project, index })
                     </div>
                     {project.caseStudy?.enabled && (
                         <div
-                            className="flex items-center text-mainViolet hover:underline"
+                            className="flex items-center justify-center text-mainViolet hover:underline mt-4"
                         >
                             {t("show_studycase")}
                             <ArrowRight 
-                                size={18}
+                                size={16}
                                 className="transform group-hover:translate-x-1 transition-transform duration-200"
                             />
                         </div>
