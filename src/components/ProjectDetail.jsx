@@ -42,6 +42,8 @@ export default function ProjectDetail()
         })
     }, [id])
 
+    console.log("La data del proyecto es", data)
+
     return(
         <CompSection className="lg:!my-20">
             <BackButton label={t("back_projects")} />
