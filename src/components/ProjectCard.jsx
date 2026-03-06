@@ -48,7 +48,7 @@ export default function ProjectCard({ project, index })
                 <div className="p-[1.5rem] flex-grow flex flex-col">
                     <h3 className="mb-1.5 lg:text-lg">{project.title}</h3>
                     <p className="text-sm lg:text-base text-txtGrey mb-4">{project.description?.[lang]}</p>
-                    {project.tech?.[lang] && (
+                    {project.tech && project.tech.length > 0 && (
                         <TechTags tags={project.tech?.map(t => t[lang])} />
                     )}
                     <div className="mt-auto">
