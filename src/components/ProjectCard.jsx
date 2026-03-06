@@ -48,11 +48,11 @@ export default function ProjectCard({ project, index })
             <div className="rounded-lg flex flex-col h-full">
                 <img src={`/img/projects/${project.img}`} className="rounded-t-lg" />
                 <div className="p-[1.5rem] flex-grow flex flex-col">
-                    <h3 className="mb-1.5 lg:text-lg">{project.title}</h3>
-                    <p className="text-sm lg:text-base text-txtGrey mb-4">{project.description?.[lang]}</p>
                     {project.tech && project.tech.length > 0 && (
                         <TechTags tags={project.tech?.map(t => t[lang])} />
                     )}
+                    <h3 className="mb-1.5 lg:text-lg">{project.title}</h3>
+                    <p className="text-sm lg:text-base text-txtGrey mb-4">{project.description?.[lang]}</p>
                     <div className="mt-auto">
                         {project.demo_link && (
                             <CustomButton 
