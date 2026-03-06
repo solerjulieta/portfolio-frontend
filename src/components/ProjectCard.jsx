@@ -80,7 +80,7 @@ export default function ProjectCard({ project, index })
                     </div>
                     {project.caseStudy?.enabled && (
                         <div
-                            className="flex items-center text-mainViolet hover:darkViolet mt-4 text-sm"
+                            className="flex items-center text-mainViolet hover:darkViolet mt-4 text-sm group"
                         >
                             {t("show_studycase")}
                             <ArrowRight 
