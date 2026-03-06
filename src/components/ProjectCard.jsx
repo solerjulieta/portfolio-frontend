@@ -6,11 +6,13 @@ import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
 import projectEventService from '../services/projectEvent.service'
 import { div } from 'three/src/nodes/math/OperatorNode.js'
+import { useNavigate } from 'react-router-dom'
 
 export default function ProjectCard({ project, index })
 {
     const { i18n, t } = useTranslation()
     const lang = i18n.language?.slice(0,2) || "es"
+    const navigate = useNavigate()
 
     //Crear una referencia para observar el elemento
     //const ref = useRef(null)
@@ -18,7 +20,6 @@ export default function ProjectCard({ project, index })
     //const isInView = useInView(ref, { once: true, amount: 0.2 }) //// 'once: true' solo anima la primera vez. 'amount: 0.2' significa que debe ser 20% visible.
 
     function registerEvent(action){
-        console.log("hizo clic", action)
         projectEventService.register({
             projectId: project._id,
             projectType: project.category?.key === "Web" ? "web" : "graphic",
@@ -27,11 +28,19 @@ export default function ProjectCard({ project, index })
         })
     }
 
+    const handleCardClick = () => {
+        registerEvent("project_view")
+
+        if(project.caseStudy?.enabled){
+            navigate(`/projects/${project.uid || project._id}`)
+        }
+    }
+
     return(
         <motion.div 
             //ref={ref}
-            whileHover={{ scale: 1.03, transition: { duration: 0.2 } }}
-            onClick={() => registerEvent("project_view")}
+            whileHover={{ scale: 1.02, transition: { duration: 0.2 } }}
+            onClick={handleCardClick}
             className="rounded-lg border border-cardBorder shadow h-full flex flex-col mb-4 lg:mb-0"
         >
             <div className="rounded-lg flex flex-col h-full">
@@ -71,7 +80,7 @@ export default function ProjectCard({ project, index })
                     </div>
                     {project.caseStudy?.enabled && (
                         <div
-                            className="flex items-center text-mainViolet hover:underline mt-4"
+                            className="flex items-center text-mainViolet hover:darkViolet mt-4 text-sm"
                         >
                             {t("show_studycase")}
                             <ArrowRight 
