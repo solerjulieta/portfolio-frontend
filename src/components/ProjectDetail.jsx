@@ -60,7 +60,7 @@ export default function ProjectDetail()
             >
                 {project?.title}
             </motion.h1>
-            {project.tech && project.tech.length > 0 && (
+            {project?.tech && project?.tech.length > 0 && (
                 <TechTags tags={project.tech?.map(t => t[lang])} />
             )}
             {project?.caseStudy?.enabled && 
