@@ -42,8 +42,6 @@ export default function ProjectDetail()
         })
     }, [id])
 
-    console.log("La data del proyecto es", project)
-
     return(
         <CompSection className="lg:!my-20">
             <BackButton label={t("back_projects")} />
@@ -56,14 +54,14 @@ export default function ProjectDetail()
                 {t("title_studycase")}
             </motion.span>
             <motion.h1
-                className="text-2xl lg:text-4xl mb-10"
+                className="text-2xl lg:text-4xl"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
             >
                 {project?.title}
             </motion.h1>
             {project?.tech && project?.tech.length > 0 && (
-                <TechTags tags={project.tech?.map(t => t[lang])} />
+                <TechTags tags={project.tech?.map(t => t[lang])} className="mb-10" />
             )}
             {project?.caseStudy?.enabled && 
                 Array.isArray(project.caseStudy.sections) && (
