@@ -170,22 +170,22 @@ export default function ProjectDetail()
                                             {/* Color principal */}
                                             <div>
                                             <h3 className="text-lg font-semibold mb-4">
-                                                {section.palette.primary.label?.[lang]}
+                                                {section.palette?.primary?.label?.[lang]}
                                             </h3>
 
                                             <div className="flex items-center gap-6 p-4 rounded-xl border border-cardBorder w-fit">
                                                 <div
                                                     className="w-24 h-24 rounded-xl shadow-inner"
-                                                    style={{ backgroundColor: section.palette.primary.hex }}
+                                                    style={{ backgroundColor: section?.palette?.primary?.hex }}
                                                 />
 
                                                 <div className="space-y-1 text-sm">
                                                     <p className="font-semibold">
-                                                        {section.palette.primary.name?.[lang]}
+                                                        {section?.palette?.primary?.name?.[lang]}
                                                     </p>
-                                                    <p>HEX: {section.palette.primary.hex}</p>
-                                                    <p>RGB: {section.palette.primary.rgb}</p>
-                                                    <p>HSL: {section.palette.primary.hsl}</p>
+                                                    <p>HEX: {section?.palette?.primary?.hex}</p>
+                                                    <p>RGB: {section?.palette?.primary?.rgb}</p>
+                                                    <p>HSL: {section?.palette?.primary?.hsl}</p>
                                                 </div>
                                             </div>
                                             </div>
@@ -193,11 +193,11 @@ export default function ProjectDetail()
                                             {/* Colores secundarios */}
                                             <div>
                                             <h3 className="text-lg font-semibold mb-4">
-                                                {section.palette.secondaryLabel?.[lang]}
+                                                {section?.palette?.secondaryLabel?.[lang]}
                                             </h3>
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
-                                                {section.palette.secondary.map((color, i) => (
+                                                {section?.palette?.secondary.map((color, i) => (
                                                 <div
                                                     key={i}
                                                     className="flex items-center gap-4 p-4 rounded-xl border border-cardBorder w-fit"
