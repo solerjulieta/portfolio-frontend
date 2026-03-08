@@ -84,7 +84,7 @@ export default function ProjectDetail()
     return(
         <CompSection className="lg:!my-20">
             <BackButton label={t("back_projects")} />
-            <motion.div className="flex">
+            <motion.div className="flex justify-between">
                 <motion.div>
                     <motion.span
                         initial={{ opacity: 0 }}
@@ -104,23 +104,24 @@ export default function ProjectDetail()
                         <TechTags tags={project.tech?.map(t => t[lang])} className="mb-10" />
                     )}
                 </motion.div>
-                {project?.demo_link || project?.github_link}
-                <motion.div>
-                    {project?.demo_link && (
-                        <CustomButton 
-                            hRef={project.demo_link}
-                            txt="Demo"
-                            Icon={MonitorPlay}
-                        />
-                    )}
-                    {project?.github_link && (
-                        <CustomButton 
-                            hRef={project.github_link}
-                            txt="Github"
-                            Icon={Github}
-                        />
-                    )}
-                </motion.div>
+                {project?.demo_link || project?.github_link && (
+                    <motion.div>
+                        {project?.demo_link && (
+                            <CustomButton 
+                                hRef={project.demo_link}
+                                txt="Demo"
+                                Icon={MonitorPlay}
+                            />
+                        )}
+                        {project?.github_link && (
+                            <CustomButton 
+                                hRef={project.github_link}
+                                txt="Github"
+                                Icon={Github}
+                            />
+                        )}
+                    </motion.div>
+                )}
             </motion.div>
             {project?.caseStudy?.enabled && 
                 Array.isArray(project.caseStudy.sections) && (
