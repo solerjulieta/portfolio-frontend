@@ -84,7 +84,7 @@ export default function ProjectDetail()
     return(
         <CompSection className="my-12 lg:!my-20">
             <BackButton label={t("back_projects")} />
-            <motion.div className="flex justify-between mt-12">
+            <motion.div className="flex flex-col lg:flex-row lg:justify-between mt-12">
                 <motion.div>
                     <motion.span
                         initial={{ opacity: 0 }}
