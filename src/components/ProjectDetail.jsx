@@ -62,7 +62,7 @@ export default function ProjectDetail()
             }
 
             try{
-                const apiData = await projectsService.getById(uid)
+                const apiData = await projectsService.getByUid(uid)
                 if(!isMounted) return 
 
                 if(apiData){
