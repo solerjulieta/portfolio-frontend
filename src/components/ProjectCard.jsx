@@ -36,8 +36,6 @@ export default function ProjectCard({ project, index })
         }
     }
 
-    console.log("Los proyectos que vienen son", project)
-
     return(
         <motion.div 
             //ref={ref}

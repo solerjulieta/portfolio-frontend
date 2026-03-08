@@ -35,11 +35,48 @@ export default function ProjectDetail()
         leaf: Leaf
     }
 
+    async function loadProjectSnapshot(id){
+        const res = await fetch('/data/portfolio.json')
+        if(!res.ok) throw new Error('Snapshot not found')
+        
+        const json = await res.json()
+        return json.projects?.find(p => p.id == id || p.uid == id) 
+    }
+
     useEffect(() => {
-        projectsService.getById(id)
-        .then(data => {
-            setProject(data)
-        })
+        let isMounted = true
+
+        async function loadData(){
+            try{
+                const snapshot = await loadProjectSnapshot(id)
+                if(!isMounted) return
+
+                if(snapshot){
+                    setProject(snapshot)
+                    console.log("Datos del proyecto desde JSOn")
+                }
+            } catch (err){
+                console.warn("No se pudo cargar el snapshot del proyecto", err)
+            }
+
+            try{
+                const apiData = await projectsService.getById(id)
+                if(!isMounted) return 
+
+                if(apiData){
+                    setProject(apiData)
+                    console.log("Datos actualizados desde la API")
+                }
+            } catch (err) {
+                console.warn("La API falló")
+            }
+        }
+
+        loadData()
+
+        return () => {
+            isMounted = false
+        }
     }, [id])
 
     return(
