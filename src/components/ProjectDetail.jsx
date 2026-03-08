@@ -84,12 +84,12 @@ export default function ProjectDetail()
     return(
         <CompSection className="lg:!my-20">
             <BackButton label={t("back_projects")} />
-            <motion.div className="flex justify-between">
+            <motion.div className="flex justify-between mt-12">
                 <motion.div>
                     <motion.span
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
-                        className="block text-sm uppercase tracking-widest text-txtGrey mb-1 mt-12"
+                        className="block text-sm uppercase tracking-widest text-txtGrey mb-1"
                     >
                         {t("title_studycase")}
                     </motion.span>
