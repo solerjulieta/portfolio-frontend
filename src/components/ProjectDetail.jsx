@@ -105,7 +105,7 @@ export default function ProjectDetail()
                     )}
                 </motion.div>
                 {(!!project?.demo_link || !!project?.github_link) && (
-                    <motion.div>
+                    <motion.div className="mb-10">
                         {project?.demo_link && (
                             <CustomButton 
                                 hRef={project.demo_link}
