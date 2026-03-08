@@ -82,7 +82,7 @@ export default function ProjectDetail()
     }, [id])
 
     return(
-        <CompSection className="lg:!my-20">
+        <CompSection className="my-12 lg:!my-20">
             <BackButton label={t("back_projects")} />
             <motion.div className="flex justify-between mt-12">
                 <motion.div>
