@@ -79,7 +79,7 @@ export default function ProjectDetail()
         return () => {
             isMounted = false
         }
-    }, [id])
+    }, [uid])
 
     return(
         <CompSection className="my-12 lg:!my-20">
