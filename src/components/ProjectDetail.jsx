@@ -104,13 +104,14 @@ export default function ProjectDetail()
                         <TechTags tags={project.tech?.map(t => t[lang])} className="mb-10" />
                     )}
                 </motion.div>
-                {project?.demo_link || project?.github_link && (
+                {(!!project?.demo_link || !!project?.github_link) && (
                     <motion.div>
                         {project?.demo_link && (
                             <CustomButton 
                                 hRef={project.demo_link}
                                 txt="Demo"
                                 Icon={MonitorPlay}
+                                className="bg-mainViolet text-white hover:bg-darkViolet"
                             />
                         )}
                         {project?.github_link && (
@@ -118,6 +119,7 @@ export default function ProjectDetail()
                                 hRef={project.github_link}
                                 txt="Github"
                                 Icon={Github}
+                                className="border-2 border-mainViolet/10 text-mainViolet hover:border-darkViolet hover:text-darkViolet"
                             />
                         )}
                     </motion.div>
