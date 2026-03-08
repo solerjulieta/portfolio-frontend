@@ -101,7 +101,7 @@ export default function ProjectDetail()
                         {project?.title}
                     </motion.h1>
                     {project?.tech && project?.tech.length > 0 && (
-                        <TechTags tags={project.tech?.map(t => t[lang])} className="mb-10" />
+                        <TechTags tags={project.tech?.map(t => t[lang])} className="mb-2 lg:mb-10" />
                     )}
                 </motion.div>
                 {(!!project?.demo_link || !!project?.github_link) && (
