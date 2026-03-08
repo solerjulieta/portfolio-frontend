@@ -32,7 +32,7 @@ export default function ProjectCard({ project, index })
         registerEvent("project_view")
 
         if(project.caseStudy?.enabled){
-            navigate(`/project/${project._id}`)
+            navigate(`/project/${project.uid}`)
         }
     }
 

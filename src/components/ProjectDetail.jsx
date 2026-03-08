@@ -16,7 +16,7 @@ import { MonitorPlay } from 'lucide-react'
 
 export default function ProjectDetail()
 {
-    const { id } = useParams()
+    const { uid } = useParams()
     const [project, setProject] = useState()
     const lang = i18n.language || 'es'
     const { t } = useTranslation()
@@ -37,12 +37,12 @@ export default function ProjectDetail()
         leaf: Leaf
     }
 
-    async function loadProjectSnapshot(id){
+    async function loadProjectSnapshot(uid){
         const res = await fetch('/data/portfolio.json')
         if(!res.ok) throw new Error('Snapshot not found')
         
         const json = await res.json()
-        return json.projects?.find(p => p.id == id || p.uid == id) 
+        return json.projects?.find(p => p.uid == uid || p.uid == uid) 
     }
 
     useEffect(() => {
@@ -50,7 +50,7 @@ export default function ProjectDetail()
 
         async function loadData(){
             try{
-                const snapshot = await loadProjectSnapshot(id)
+                const snapshot = await loadProjectSnapshot(uid)
                 if(!isMounted) return
 
                 if(snapshot){
@@ -62,7 +62,7 @@ export default function ProjectDetail()
             }
 
             try{
-                const apiData = await projectsService.getById(id)
+                const apiData = await projectsService.getById(uid)
                 if(!isMounted) return 
 
                 if(apiData){
