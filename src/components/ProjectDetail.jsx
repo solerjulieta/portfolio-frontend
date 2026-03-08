@@ -6,11 +6,13 @@ import projectsService from '../services/projects.service'
 import { useParams } from 'react-router-dom'
 import i18n from '../js/i18n'
 import ReactMarkDown from 'react-markdown'
-import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles, LayoutGrid, Shuffle, Leaf } from 'lucide-react'
+import { Heart, ShieldCheck, Eye, Users, Palette, Zap, HandHeart, UsersRound, Aperture, Camera, Sparkles, LayoutGrid, Shuffle, Leaf, Github } from 'lucide-react'
 import BackButton from './BackButton'
 import { useTranslation } from 'react-i18next'
 import ScrollToTop from './ScrollToTop'
 import TechTags from './TechTags'
+import CustomButton from './CustomButton'
+import { MonitorPlay } from 'lucide-react'
 
 export default function ProjectDetail()
 {
@@ -82,24 +84,42 @@ export default function ProjectDetail()
     return(
         <CompSection className="lg:!my-20">
             <BackButton label={t("back_projects")} />
-
-            <motion.span
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                className="block text-sm uppercase tracking-widest text-txtGrey mb-1 mt-12"
-            >
-                {t("title_studycase")}
-            </motion.span>
-            <motion.h1
-                className="text-2xl lg:text-4xl mb-2"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-            >
-                {project?.title}
-            </motion.h1>
-            {project?.tech && project?.tech.length > 0 && (
-                <TechTags tags={project.tech?.map(t => t[lang])} className="mb-10" />
-            )}
+            <motion.div>
+                <motion.span
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    className="block text-sm uppercase tracking-widest text-txtGrey mb-1 mt-12"
+                >
+                    {t("title_studycase")}
+                </motion.span>
+                <motion.h1
+                    className="text-2xl lg:text-4xl mb-2"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                >
+                    {project?.title}
+                </motion.h1>
+                {project?.tech && project?.tech.length > 0 && (
+                    <TechTags tags={project.tech?.map(t => t[lang])} className="mb-10" />
+                )}
+            </motion.div>
+            {project?.demo_link || project?.github_link}
+            <motion.div>
+                {project?.demo_link && (
+                    <CustomButton 
+                        hRef={project.demo_link}
+                        txt="Demo"
+                        Icon={MonitorPlay}
+                    />
+                )}
+                {project?.github_link && (
+                    <CustomButton 
+                        hRef={project.github_link}
+                        txt="Github"
+                        Icon={Github}
+                    />
+                )}
+            </motion.div>
             {project?.caseStudy?.enabled && 
                 Array.isArray(project.caseStudy.sections) && (
                     <div className="space-y-16">
