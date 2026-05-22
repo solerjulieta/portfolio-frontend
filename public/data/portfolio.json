@@ -501,6 +501,66 @@
             "status": {
                 "key": "PUBLISHED"
             }
+        },
+        {
+            "id": "edu-12",
+            "uid": "analisis-datos",
+            "title": {
+                "es": "Análisis de Datos",
+                "en": "Data Analystic"
+            },
+            "institution": {
+                "es": "MundosE",
+                "en": "MundosE"
+            },
+            "start": 2026,
+            "end": 2026,
+            "category": {
+                "key": "Course",
+                "es": "Curso",
+                "en": "Course"
+            },
+            "subcategory": {
+                "es": "Software",
+                "en": "Software"
+            },
+            "mode": {
+                "es": "Virtual",
+                "en": "Online"
+            },
+            "status": {
+                "key": "PUBLISHED"
+            }
+        },
+        {
+            "id": "edu-13",
+            "uid": "programacion-backend",
+            "title": {
+                "es": "Programación backend 1: Desarrollo avanzado de backend flex",
+                "en": "Programming backend 1: Advanced flex backend development"
+            },
+            "institution": {
+                "es": "Coderhouse",
+                "en": "Coderhouse"
+            },
+            "start": 2026,
+            "end": 2026,
+            "category": {
+                "key": "Course",
+                "es": "Curso",
+                "en": "Course"
+            },
+            "subcategory": {
+                "es": "Software",
+                "en": "Software"
+            },
+            "mode": {
+                "es": "Virtual",
+                "en": "Online"
+            },
+            "status": {
+                "key": "PUBLISHED"
+            }
         }
     ],
     "projects": [
