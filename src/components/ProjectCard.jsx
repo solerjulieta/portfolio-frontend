@@ -51,7 +51,7 @@ export default function ProjectCard({ project, index })
                     )}
                     <h3 className="mb-1.5 lg:text-lg">{project.title}</h3>
                     <p className="text-sm lg:text-base text-txtGrey mb-4">{project.description?.[lang]}</p>
-                    <div className="mt-auto">
+                    <div className="flex lg:flex-raw mt-auto">
                         {project.demo_link && (
                             <CustomButton 
                                 hRef={project.demo_link}
