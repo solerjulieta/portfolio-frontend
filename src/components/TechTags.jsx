@@ -25,8 +25,7 @@ const iconMap = {
     "PHP": SiPhp,
     "MySQL": SiMysql,
     "Handlebars": SiHandlebars,
-    "WebSockets": SiSocketdotio,
-    "Express": SiNodedotjs
+    "WebSockets": SiSocketdotio
 }
 
 export default function TechTags({ tags, className })
