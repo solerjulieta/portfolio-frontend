@@ -625,6 +625,7 @@
             "status": {
                 "key": "PUBLISHED"
             },
+            "created_at": "2025-02-01T13:20:38.678+00:00",
             "caseStudy": {
                 "enabled": true,
                 "sections": [
@@ -652,7 +653,7 @@
                     },
                     {
                         "order": 3,
-                        "key": "coloer",
+                        "key": "color",
                         "subtitle": { "es": "Color", "en": "Color" },
                         "title": { "es": "Donde la emoción toma color", "en": "Where emotion takes color" },
                         "body": { "es": "A través del color se construye una narrativa visual que refuerza los valores y objetivos de la marca. \n\nLa paleta elegida busca transmitir una sensación de **tranquilidad y seguridad**, generando un entorno de **confianza** en cada interacción. Al mismo tiempo, los matices y contrastes expresan **progreso y dinamismo**, reflejando el crecimiento constante del proyecto y su capacidad de adaptación. Finalmente, los tonos más cálidos aportan una dimensión emocional, evocando amor y afecto, y fortaleciendo el vínculo entre la marca y las personas que la utilizan.", "en": "Through color, a visual narrative is built to reinforce the brand’s values and objectives. \n\nThe chosen palette aims to convey a sense of **calm and security**, creating an environment of **trust** in every interaction. At the same time, the interplay of tones and contrasts expresses **progress and dynamism**, reflecting the project’s continuous growth and ability to evolve. Finally, warmer hues add an emotional layer, evoking love and care, and strengthening the bond between the brand and the people who engage with it." },
@@ -797,6 +798,7 @@
             "status": {
                 "key": "PUBLISHED"
             },
+            "created_at": "2022-12-01T13:23:04.015+00:00",
             "caseStudy": {
                 "enabled": false,
                 "sections": [
@@ -824,7 +826,7 @@
                     },
                     {
                         "order": 3,
-                        "key": "coloer",
+                        "key": "color",
                         "subtitle": { "es": "Color", "en": "Color" },
                         "title": { "es": "Donde la emoción toma color", "en": "Where emotion takes color" },
                         "body": { "es": "A través del color se construye una narrativa visual que refuerza los valores y objetivos de la marca. \n\nLa paleta elegida busca transmitir una sensación de **tranquilidad y seguridad**, generando un entorno de **confianza** en cada interacción. Al mismo tiempo, los matices y contrastes expresan **progreso y dinamismo**, reflejando el crecimiento constante del proyecto y su capacidad de adaptación. Finalmente, los tonos más cálidos aportan una dimensión emocional, evocando amor y afecto, y fortaleciendo el vínculo entre la marca y las personas que la utilizan.", "en": "Through color, a visual narrative is built to reinforce the brand’s values and objectives. \n\nThe chosen palette aims to convey a sense of **calm and security**, creating an environment of **trust** in every interaction. At the same time, the interplay of tones and contrasts expresses **progress and dynamism**, reflecting the project’s continuous growth and ability to evolve. Finally, warmer hues add an emotional layer, evoking love and care, and strengthening the bond between the brand and the people who engage with it." },
@@ -964,6 +966,7 @@
                     "en": "Illustrator"
                 }
             ],
+            "created_at": "2017-07-27T15:12:15.096+00:00",
             "caseStudy": {
                 "enabled": true,
                 "sections": [
@@ -1083,6 +1086,7 @@
                     "en": "Illustrator"
                 }
             ],
+            "created_at": "2015-07-27T15:23:18.131+00:00",
             "caseStudy": {
                 "enabled": true,
                 "sections": [
@@ -1177,6 +1181,7 @@
                     "en": "Illustrator"
                 }
             ],
+            "created_at": "2019-07-27T15:28:19.766+00:00",
             "caseStudy": {
                 "enabled": true,
                 "sections": [
@@ -1299,6 +1304,7 @@
             "status": {
                 "key": "PUBLISHED"
             },
+            "created_at": "2026-06-01T15:28:19.766+00:00",
             "caseStudy": {
                 "enabled": false,
                 "sections": [
@@ -1326,7 +1332,7 @@
                     },
                     {
                         "order": 3,
-                        "key": "coloer",
+                        "key": "color",
                         "subtitle": { "es": "Color", "en": "Color" },
                         "title": { "es": "Donde la emoción toma color", "en": "Where emotion takes color" },
                         "body": { "es": "A través del color se construye una narrativa visual que refuerza los valores y objetivos de la marca. \n\nLa paleta elegida busca transmitir una sensación de **tranquilidad y seguridad**, generando un entorno de **confianza** en cada interacción. Al mismo tiempo, los matices y contrastes expresan **progreso y dinamismo**, reflejando el crecimiento constante del proyecto y su capacidad de adaptación. Finalmente, los tonos más cálidos aportan una dimensión emocional, evocando amor y afecto, y fortaleciendo el vínculo entre la marca y las personas que la utilizan.", "en": "Through color, a visual narrative is built to reinforce the brand’s values and objectives. \n\nThe chosen palette aims to convey a sense of **calm and security**, creating an environment of **trust** in every interaction. At the same time, the interplay of tones and contrasts expresses **progress and dynamism**, reflecting the project’s continuous growth and ability to evolve. Finally, warmer hues add an emotional layer, evoking love and care, and strengthening the bond between the brand and the people who engage with it." },
