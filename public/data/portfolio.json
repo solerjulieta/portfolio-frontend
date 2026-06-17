@@ -594,7 +594,7 @@
         },
         {
             "id": "edu-13",
-            "uid": "programming-one",
+            "uid": "programming-two",
             "title": {
                 "es": "Programación backend II: Diseño y Arquitectura Backend Flex",
                 "en": "Programming backend II: Flex Backend Design and Architecture"
