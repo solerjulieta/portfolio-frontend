@@ -536,8 +536,8 @@
             "id": "edu-13",
             "uid": "programming-one",
             "title": {
-                "es": "Programación backend 1: Desarrollo avanzado de backend flex",
-                "en": "Programming backend 1: Advanced flex backend development"
+                "es": "Programación backend I: Desarrollo avanzado de backend flex",
+                "en": "Programming backend I: Advanced flex backend development"
             },
             "institution": {
                 "es": "Coderhouse",
@@ -589,6 +589,62 @@
                 {
                     "es": "WebSockets",
                     "en": "WebSockets"
+                }
+            ]
+        },
+        {
+            "id": "edu-13",
+            "uid": "programming-one",
+            "title": {
+                "es": "Programación backend II: Diseño y Arquitectura Backend Flex",
+                "en": "Programming backend II: Flex Backend Design and Architecture"
+            },
+            "institution": {
+                "es": "Coderhouse",
+                "en": "Coderhouse"
+            },
+            "start": 2026,
+            "end": 2026,
+            "category": {
+                "key": "Course",
+                "es": "Curso",
+                "en": "Course"
+            },
+            "subcategory": {
+                "es": "Software",
+                "en": "Software"
+            },
+            "mode": {
+                "es": "Virtual",
+                "en": "Online"
+            },
+            "status": {
+                "key": "PUBLISHED"
+            },
+            "skills":[
+                {
+                    "es": "Node.js",
+                    "en": "Node.js"
+                },
+                {
+                    "es": "Express",
+                    "en": "Express"
+                },
+                {
+                    "es": "MongoDB",
+                    "en": "MongoDB"
+                },
+                {
+                    "es": "Mongoose",
+                    "en": "Mongoose"
+                },
+                {
+                    "es": "JavaScript",
+                    "en": "JavaScript"
+                },
+                {
+                    "es": "JWT",
+                    "en": "JWT"
                 }
             ]
         }
