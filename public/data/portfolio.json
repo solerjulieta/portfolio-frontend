@@ -672,6 +672,7 @@
                 }
             ],
             "demo_link": "https://tebuscoar.vercel.app",
+            "github_link": "https://github.com/solerjulieta/tebusco_be",
             "category": {
                 "key": "Web",
                 "es": "Web",
